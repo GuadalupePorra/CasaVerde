@@ -1,0 +1,27 @@
+{
+  "name": "casa-verde",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "next": "15.5.3",
+    "react": "19.1.0",
+    "react-dom": "19.1.0",
+    "resend": "^6.1.0",
+    "styled-components": "^6.1.19"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^24.5.2",
+    "@types/react": "^19.1.14",
+    "babel-plugin-styled-components": "^2.1.4",
+    "eslint": "^9",
+    "eslint-config-next": "15.5.3",
+    "typescript": "^5.9.2"
+  }
+}
