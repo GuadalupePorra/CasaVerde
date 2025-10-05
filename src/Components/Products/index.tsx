@@ -50,7 +50,6 @@ export default function ProductSection() {
     fetchAndSetPlants();
   }, []);
 
-  // Ordenar según opción seleccionada
   const getSortedPlants = (): Plant[] => {
     if (sortOption === '') {
       return originalPlants;
@@ -76,11 +75,10 @@ export default function ProductSection() {
   if (loading) return <p>Cargando plantas...</p>;
 
   return (
-    <SectionContainer>
+    <SectionContainer id="ofertas">
       <SubTitle>Nuestras</SubTitle>
       <MainTitle>plantas</MainTitle>
 
-      {/* BLOQUE DE FILTROS */}
       <Filter>
         <Order>
           <label htmlFor="orderby">Ordenar por:</label>

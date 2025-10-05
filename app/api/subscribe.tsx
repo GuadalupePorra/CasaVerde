@@ -13,17 +13,17 @@ export default async function handler(req, res) {
     const data = await resend.emails.send({
       from: 'onboarding@resend.dev',
       to: email,
-      subject: 'Confirmação de Inscrição na Newsletter',
+      subject: 'Confirmación de  inscripción al Newsletter',
       html: `
-        <p>Olá, ${name || 'amigo(a)'}.</p>
-        <p>Bem-vindo à <strong>Casa Verde</strong>! Você se inscreveu na nossa newsletter e começará a receber novidades e dicas para cuidar das suas plantas.</p>
-        <p>Até logo!</p>
+        <p>Hola, ${name || 'amigo(a)'}.</p>
+        <p>Bienvenido a <strong>Casa Verde</strong>! Te inscribiste a nuestro  newsletter y comenzarás a recibir novedades y consejos para el cuidado de tus plantas.</p>
+        <p>¡Hasta luego!</p>
       `,
     });
 
     return res.status(200).json({ success: true });
   } catch (error) {
-    console.error('Erro ao enviar e-mail:', error);
-    return res.status(500).json({ error: 'Erro ao enviar e-mail.' });
+    console.error('Error al enviar el e-mail:', error);
+    return res.status(500).json({ error: 'Error al enviar  el e-mail.' });
   }
 }

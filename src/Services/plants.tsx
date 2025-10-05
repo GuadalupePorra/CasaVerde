@@ -12,7 +12,6 @@ export const getPlants = async () => {
 
     const data = await response.json();
 
-    // Solo limitamos a 6 plantas, sin filtro por stock
     const limitedPlants = data.slice(0, 6);
 
     return limitedPlants;

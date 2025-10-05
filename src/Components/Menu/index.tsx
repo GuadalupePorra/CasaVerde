@@ -1,16 +1,19 @@
 'use client';
 import React, { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 import { Header, NavMenu, BurgerButton, MobileMenuWrapper } from './styles';
 
 const Menu: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   const toggleMenu = () => setIsOpen(!isOpen);
+  const handleLinkClick = () => setIsOpen(false); // cierra menú al hacer click
 
   return (
     <Header>
       <div>
-        <img src="/icons/logo.svg" alt="Logo" />
+        <Image src="/icons/logo.svg" alt="Casa Verde" width={120} height={60} />
       </div>
 
       <BurgerButton onClick={toggleMenu}>
@@ -21,11 +24,21 @@ const Menu: React.FC = () => {
 
       <MobileMenuWrapper $isOpen={isOpen}>
         <NavMenu>
-          <li><a href="/">Como hacer</a></li>
-          <li><a href="/">Ofertas</a></li>
-          <li><a href="/">Testimonios</a></li>
-          <li><a href="/">Vídeos</a></li>
-          <li><a href="/"><strong>Mi carrito</strong></a></li>
+          <li>
+            <Link href="#newsletter" onClick={handleLinkClick}>Como hacer</Link>
+          </li>
+          <li>
+            <Link href="#ofertas" onClick={handleLinkClick}>Ofertas</Link>
+          </li>
+          <li>
+            <Link href="/" onClick={handleLinkClick}>Testimonios</Link>
+          </li>
+          <li>
+            <Link href="/" onClick={handleLinkClick}>Vídeos</Link>
+          </li>
+          <li>
+            <Link href="/" onClick={handleLinkClick}><strong>Mi carrito</strong></Link>
+          </li>
         </NavMenu>
       </MobileMenuWrapper>
     </Header>

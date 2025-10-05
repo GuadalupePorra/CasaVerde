@@ -6,8 +6,8 @@ export const lightTheme = {
     background: '#fcfcfc',
   },
   fonts: {
-    main: 'Montserrat',
-    secondary: 'Elsie Swash Caps',
+    main: 'var(--font-montserrat)',
+    secondary: 'var(--font-elsie)',
   },
 };
 

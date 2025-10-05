@@ -4,6 +4,9 @@ import { ResetCSS } from "./ResetCSS";
 
 export const GlobalStyle = createGlobalStyle`
   ${ResetCSS}
+  html {
+    scroll-behavior: smooth;
+  }
 
   body {
     font-family: ${({ theme }) => theme.fonts.main}, sans-serif;
