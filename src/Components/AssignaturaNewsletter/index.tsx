@@ -53,7 +53,7 @@ export default function AssinaturaNewsletter() {
 
       if (response.ok) {
         setSuccessMessage(
-          `Gracias por subscribirse, Recibiras nuestras novedades en: ${email}`
+          `Gracias por subscribirte, Recibiras nuestras novedades en: ${email}`
         );
         setEmail('');
         setErrorMessage('');
