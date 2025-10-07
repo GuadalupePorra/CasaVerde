@@ -13,7 +13,7 @@ const Menu: React.FC = () => {
   return (
     <Header>
       <div>
-        <Image src="/icons/logo.svg" alt="Casa Verde" width={120} height={60} />
+        <Image src="/icons/logo.svg" alt="Casa Verde" width={180} height={40} />
       </div>
 
       <BurgerButton onClick={toggleMenu}>

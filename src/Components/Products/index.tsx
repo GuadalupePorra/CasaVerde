@@ -22,23 +22,23 @@ type Plant = {
   quantity: number;
 };
 
-type SortOption = 'price' | 'name' | ''; // '' = predeterminada
+type SortOption = 'price' | 'name' | ''; 
 
 export default function ProductSection() {
   const [plants, setPlants] = useState<Plant[]>([]);
   const [originalPlants, setOriginalPlants] = useState<Plant[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
-  const [sortOption, setSortOption] = useState<SortOption>(''); // Ordenación predeterminada
+  const [sortOption, setSortOption] = useState<SortOption>(''); 
   const [maxPrice, setMaxPrice] = useState<number | null>(null);
-  const [priceInput, setPriceInput] = useState<string>(''); // input del form
-
+  const [priceInput, setPriceInput] = useState<string>(''); 
+  
   useEffect(() => {
     const fetchAndSetPlants = async () => {
       try {
         const data = await getPlants();
         const availablePlants = data.filter((plant) => plant.quantity > 0);
-        setOriginalPlants(availablePlants); // guarda orden original
+        setOriginalPlants(availablePlants); 
         setPlants(availablePlants);
       } catch (error) {
         console.error('Erro ao buscar plantas:', error);
@@ -87,7 +87,7 @@ export default function ProductSection() {
             value={sortOption}
             onChange={(e) => setSortOption(e.target.value as SortOption)}
           >
-            <option value="">Ordenación predeterminada</option>
+            <option value="">Predeterminado</option>
             <option value="price">Precio</option>
             <option value="name">Nombre</option>
           </select>
